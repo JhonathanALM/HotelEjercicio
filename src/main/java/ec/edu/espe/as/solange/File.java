@@ -1,11 +1,8 @@
 package ec.edu.espe.as.solange;
 
 import java.io.IOException;
-import static java.lang.Thread.sleep;
 import java.util.Iterator;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.io.FileUtils;
@@ -64,3 +61,4 @@ public class File {
         }
     }
 }
+//darasme qcredito o recomendaciones con el jefe jaja :'v

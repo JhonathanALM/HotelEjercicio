@@ -1,8 +1,5 @@
 package ec.edu.espe.as.solange;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author jhona
@@ -22,8 +19,8 @@ public class Hotel {
 
     public String findHotel(String[] days, String type) {
         String aux = "";
-        for (String d : days) {
-            switch (d) {
+        for (String d : days) {           
+            switch (d.toLowerCase()) {
                 case "sat":
                     aux = "weekend";
                     break;
@@ -38,7 +35,12 @@ public class Hotel {
             price[1] = price[1] + operate("Bridgewood", aux, type);
             price[2] = price[2] + operate("Ridgewood", aux, type);
         }
-
+        //borrar esto 
+        System.out.println("Total L=" + price[0]);
+        System.out.println("Total B=" + price[1]);
+        System.out.println("Total R=" + price[2]);
+        /****/
+        
         String foundHotel = "";
 
         int iMenor = 0;
@@ -72,44 +74,44 @@ public class Hotel {
         int dayValue = 0;
         switch (hotel) {
             case "Lakewood":
-                if (dayType.equals("weekday") && cusType.equals("Regular")) {
+                if (dayType.equals("weekday") && cusType.toLowerCase().equals("regular")) {
                     dayValue = 110;
                 }
-                if (dayType.equals("weekday") && cusType.equals("Rewards")) {
+                if (dayType.equals("weekday") && cusType.toLowerCase().equals("rewards")) {
                     dayValue = 80;
                 }
-                if (dayType.equals("weekend") && cusType.equals("Regular")) {
+                if (dayType.equals("weekend") && cusType.toLowerCase().equals("regular")) {
                     dayValue = 90;
                 }
-                if (dayType.equals("weekend") && cusType.equals("Rewards")) {
+                if (dayType.equals("weekend") && cusType.toLowerCase().equals("rewards")) {
                     dayValue = 80;
                 }
                 break;
             case "Bridgewood":
-                if (dayType.equals("weekday") && cusType.equals("Regular")) {
+                if (dayType.equals("weekday") && cusType.toLowerCase().equals("regular")) {
                     dayValue = 160;
                 }
-                if (dayType.equals("weekday") && cusType.equals("Rewards")) {
+                if (dayType.equals("weekday") && cusType.toLowerCase().equals("rewards")) {
                     dayValue = 110;
                 }
-                if (dayType.equals("weekend") && cusType.equals("Regular")) {
+                if (dayType.equals("weekend") && cusType.toLowerCase().equals("regular")) {
                     dayValue = 60;
                 }
-                if (dayType.equals("weekend") && cusType.equals("Rewards")) {
+                if (dayType.equals("weekend") && cusType.toLowerCase().equals("rewards")) {
                     dayValue = 50;
                 }
                 break;
             case "Ridgewood":
-                if (dayType.equals("weekday") && cusType.equals("Regular")) {
+                if (dayType.equals("weekday") && cusType.toLowerCase().equals("regular")) {
                     dayValue = 220;
                 }
-                if (dayType.equals("weekday") && cusType.equals("Rewards")) {
+                if (dayType.equals("weekday") && cusType.toLowerCase().equals("rewards")) {
                     dayValue = 100;
                 }
-                if (dayType.equals("weekend") && cusType.equals("Regular")) {
+                if (dayType.equals("weekend") && cusType.toLowerCase().equals("regular")) {
                     dayValue = 150;
                 }
-                if (dayType.equals("weekend") && cusType.equals("Rewards")) {
+                if (dayType.equals("weekend") && cusType.toLowerCase().equals("rewards")) {
                     dayValue = 40;
                 }
                 break;
